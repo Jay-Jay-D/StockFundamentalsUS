@@ -1,2 +1,10 @@
 
 creds/
+
+raw_data/
+
+terraform/.terraform/
+
+terraform/.terraform.lock.hcl
+
+*.tfstate
