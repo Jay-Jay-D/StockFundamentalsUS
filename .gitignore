@@ -8,3 +8,9 @@ terraform/.terraform/
 terraform/.terraform.lock.hcl
 
 *.tfstate
+
+airflow/logs/
+
+airflow/.env
+
+*.backup
