@@ -11,6 +11,6 @@ terraform/.terraform.lock.hcl
 
 airflow/logs/
 
-airflow/.env
-
 *.backup
+
+airflow/init_airflow-unused.sh

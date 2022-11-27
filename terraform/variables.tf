@@ -1,5 +1,5 @@
 locals {
-  data_lake_bucket = "sotck_fundamentals_us_data_lake"
+  data_lake_bucket = "dl-sotck_fundamentals_us"
 }
 
 variable "project" {
