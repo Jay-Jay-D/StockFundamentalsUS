@@ -16,3 +16,5 @@ airflow/logs/
 airflow/init_airflow-unused.sh
 
 venv/
+
+airflow/dags/__pycache__/
