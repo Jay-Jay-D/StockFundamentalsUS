@@ -1,19 +1,20 @@
 # First-time build can take upto 10 mins.
 
-FROM apache/airflow:2.2.5-python3.9
+FROM apache/airflow:2.4.3-python3.10
 
 ENV AIRFLOW_HOME=/opt/airflow
 
 USER root
-RUN apt-get update -qq && apt-get install vim unzip -qqq
+RUN apt-get update -qq && apt-get install vim unzip wget -qqq
 # git gcc g++ -qqq
 
+USER airflow
 COPY requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Ref: https://airflow.apache.org/docs/docker-stack/recipes.html
-
+USER root
 SHELL ["/bin/bash", "-o", "pipefail", "-e", "-u", "-x", "-c"]
 
 ARG CLOUD_SDK_VERSION=410.0.0
