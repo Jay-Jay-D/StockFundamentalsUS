@@ -18,3 +18,5 @@ airflow/init_airflow-unused.sh
 venv/
 
 airflow/dags/__pycache__/
+
+tmp/

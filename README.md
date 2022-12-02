@@ -10,6 +10,7 @@
 ## Helpers  
  - [Warnings because of user credentials without quota project](https://stackoverflow.com/a/72746642/3928185)
  - [What is the difference between gcloud auth application-default login vs gcloud auth login?](https://stackoverflow.com/questions/53306131/difference-between-gcloud-auth-application-default-login-and-gcloud-auth-logi) This saved me when I changues Cloud user and project.
+ - [gcloud CLI cheatsheet PDF](https://cloud.google.com/sdk/docs/images/gcloud-cheat-sheet.pdf) 
 
  ## Smelly but interesting nonetheless:
  - [Running a Terraform command via Airflow operator](https://stackoverflow.com/a/66801089/3928185)
