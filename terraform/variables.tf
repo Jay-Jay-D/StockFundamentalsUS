@@ -1,5 +1,5 @@
 locals {
-  data_lake_bucket = "dl-sotck_fundamentals_us"
+  data_lake_bucket = "dl-stock_fundamentals_us"
 }
 
 variable "project" {
@@ -20,6 +20,6 @@ variable "storage_class" {
 
 variable "BQ_DATASET" {
   description = "BigQuery Dataset that raw data (from GCS) will be written to"
-  default     = "sotck_fundamentals_us"
+  default     = "stock_fundamentals_us"
   type        = string
 }

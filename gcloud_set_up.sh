@@ -4,6 +4,8 @@ account=analialduarte@gmail.com
 project_id=stock-fundamental-us
 service_account_name=terraform
 service_account="${service_account_name}@${project_id}.iam.gserviceaccount.com"
+service_account_key_path="$HOME/.google/credentials/google_credentials.json"
+billing_account="0X0X0X-0X0X0X-0X0X0X"
 
 # log in 
 gcloud auth application-default login
@@ -34,3 +36,11 @@ gcloud projects add-iam-policy-binding "$project_id" \
     --member="serviceAccount:${service_account}" \
     --role="roles/storage.objectAdmin"
 
+# download service account key 
+gcloud iam service-accounts keys create "$service_account_key_path" --iam-account=$service_account
+
+# list billing accounts
+gcloud beta billing accounts list
+
+# link billing account to project
+gcloud beta billing accounts projects link "$project_id" --billing-account="$billing_account"

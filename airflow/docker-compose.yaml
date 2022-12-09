@@ -62,6 +62,8 @@ x-airflow-common:
     AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT: 'google-cloud-platform://?extra__google_cloud_platform__key_path=/.google/credentials/google_credentials.json'
     GCP_PROJECT_ID: "${GCP_PROJECT_ID}"
     GCP_GCS_BUCKET: "${GCP_GCS_BUCKET}"
+    BQ_DATASET: "${BQ_DATASET}"
+    BQ_DATASET_ID: "${BQ_DATASET_ID}"
     #PG_HOST: "${PG_HOST}"
     #PG_USER: "${PG_USER}"
     #PG_PASSWORD: "${PG_PASSWORD}"

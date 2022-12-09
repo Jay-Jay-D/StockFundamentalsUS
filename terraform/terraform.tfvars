@@ -1,1 +1,1 @@
-project = "stockfundamentalsus-369811"
+project = "stock-fundamental-us"
