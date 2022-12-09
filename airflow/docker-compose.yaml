@@ -63,7 +63,6 @@ x-airflow-common:
     GCP_PROJECT_ID: "${GCP_PROJECT_ID}"
     GCP_GCS_BUCKET: "${GCP_GCS_BUCKET}"
     BQ_DATASET: "${BQ_DATASET}"
-    BQ_DATASET_ID: "${BQ_DATASET_ID}"
     #PG_HOST: "${PG_HOST}"
     #PG_USER: "${PG_USER}"
     #PG_PASSWORD: "${PG_PASSWORD}"

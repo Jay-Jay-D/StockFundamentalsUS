@@ -18,7 +18,6 @@ import pandas as pd
 PROJECT_ID = os.environ.get("GCP_PROJECT_ID")
 BUCKET = os.environ.get("GCP_GCS_BUCKET")
 BQ_DATASET = os.environ.get("BQ_DATASET")
-BQ_DATASET_ID = os.environ.get("BQ_DATASET_ID")
 
 YESTERDAY = datetime.now() - timedelta(days=1)
 
@@ -64,11 +63,6 @@ def upload_to_gcs(bucket, raw_data_folder):
         blob = bucket.blob(object_name)
         blob.upload_from_filename(parquet_file)
 
-
-def generate_bq_table_resource(table):
-    pass
-
-
 with DAG(
     dag_id="stock_fundamental_us_data_ingestion",
     schedule_interval="0 12 * * *",
@@ -106,19 +100,13 @@ with DAG(
     clean_raw_data_folder_task = BashOperator(
         task_id="clean_raw_data_folder", bash_command=f"rm -v {raw_data_folder}*"
     )
-    
-    check_env_vars = BashOperator(
-        task_id="LRPM con ls env vars", 
-        bash_command=f'echo data set id: "{BQ_DATASET_ID} | data set: "{BQ_DATASET}"'
-    )
-
 
     gcs_2_bq_companies_task = BigQueryCreateExternalTableOperator(
         task_id=f"bq_{BQ_DATASET}_external_companies_table_task",
         table_resource={
             "tableReference": {
                 "projectId": PROJECT_ID,
-                "datasetId": BQ_DATASET_ID,
+                "datasetId": BQ_DATASET,
                 "tableId": f"raw-companies",
             },
             "schema": {
@@ -153,7 +141,7 @@ with DAG(
         table_resource={
             "tableReference": {
                 "projectId": PROJECT_ID,
-                "datasetId": BQ_DATASET_ID,
+                "datasetId": BQ_DATASET,
                 "tableId": f"raw-indicators_by_company",
             },
             "schema": {
@@ -218,9 +206,6 @@ with DAG(
         bash_command="echo {{ dag_run.id }}"
     )
 
-check_env_vars >> print_dag_run_conf
-
-'''
     (
         download_dataset_task
         >> unzip_dataset_task
@@ -231,4 +216,3 @@ check_env_vars >> print_dag_run_conf
         >> gcs_2_bq_indicators_task
         >> print_dag_run_conf
     )
-'''

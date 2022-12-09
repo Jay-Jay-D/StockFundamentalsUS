@@ -20,3 +20,5 @@ venv/
 airflow/dags/__pycache__/
 
 tmp/
+
+gcloud_cli_sandbox/
