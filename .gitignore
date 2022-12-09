@@ -22,3 +22,7 @@ airflow/dags/__pycache__/
 tmp/
 
 gcloud_cli_sandbox/
+
+dbt/logs/
+dbt/target/
+dbt/dbt_packages/
