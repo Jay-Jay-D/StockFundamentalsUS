@@ -23,6 +23,7 @@ tmp/
 
 gcloud_cli_sandbox/
 
-dbt/logs/
-dbt/target/
-dbt/dbt_packages/
+dbt_sfu/logs/
+dbt_sfu/target/
+dbt_sfu/dbt_packages/
+logs/

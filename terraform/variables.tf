@@ -1,5 +1,5 @@
 locals {
-  data_lake_bucket = "dl-stock_fundamentals_us"
+  data_lake_bucket = "data_lake_sfu"
 }
 
 variable "project" {
@@ -9,7 +9,7 @@ variable "project" {
 
 variable "region" {
   description = "Region for GCP resources."
-  default     = "us-west1"
+  default     = "us"
   type        = string
 }
 
@@ -20,6 +20,6 @@ variable "storage_class" {
 
 variable "BQ_DATASET" {
   description = "BigQuery Dataset that raw data (from GCS) will be written to"
-  default     = "stock_fundamentals_us"
+  default     = "data_warehouse"
   type        = string
 }
