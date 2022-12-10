@@ -6,6 +6,9 @@
  - [Testing Terraform Infrastructure-as-code: Unit tests & BDD end-to-end scenario testing review](https://medium.com/contino-engineering/terraform-infrastructure-as-code-testing-best-practice-unit-tests-bdd-end-to-end-scenario-c30d5a6921d)
  - [Officcial - Testing HashiCorp Terraform](https://www.hashicorp.com/blog/testing-hashicorp-terraform)
  - [Automate Your Data Warehouse with Airflow on Google Cloud Platform](https://selectfrom.dev/automate-your-data-warehouse-with-airflow-on-gcp-b48dfe51360f)
+ - [Data preparation with dbt and BigQuery](https://blog.pythian.com/data-preparation-with-dbt-and-bigquery/)
+ - [Toward Better Data Management on BigQuery with dbt](https://engineering.mercari.com/en/blog/entry/20201207-toward-better-data-management-on-bigquery-with-dbt/)
+
 
 ## Helpers  
  - [Warnings because of user credentials without quota project](https://stackoverflow.com/a/72746642/3928185)
