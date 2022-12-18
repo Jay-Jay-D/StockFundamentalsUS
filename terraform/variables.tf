@@ -1,5 +1,5 @@
 locals {
-  data_lake_bucket = "data_lake_sfu"
+  data_lake_bucket = "data_lake_qg"
 }
 
 variable "project" {

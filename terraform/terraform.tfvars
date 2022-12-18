@@ -1,1 +1,1 @@
-project = "stock-fundamental-us"
+project = "linear-reporter-337312"

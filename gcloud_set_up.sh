@@ -36,6 +36,11 @@ gcloud projects add-iam-policy-binding "$project_id" \
     --member="serviceAccount:${service_account}" \
     --role="roles/storage.objectAdmin"
 
+# authorize access to GCP with a service account 
+gcloud auth activate-service-account \
+    --key-file=${service_account_key_path} \
+    --project=${project_id}
+
 # download service account key 
 gcloud iam service-accounts keys create "$service_account_key_path" --iam-account=$service_account
 
