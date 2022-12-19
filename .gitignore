@@ -27,3 +27,5 @@ dbt_sfu/logs/
 dbt_sfu/target/
 dbt_sfu/dbt_packages/
 logs/
+
+.vscode/
