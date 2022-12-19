@@ -38,3 +38,5 @@ models:
       +materialized: view
     result:
       +materialized: table
+    report:
+      +materialized: table
