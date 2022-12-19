@@ -1,0 +1,46 @@
+version: 2
+
+sources: 
+  - name: raw_tables
+    project: 'linear-reporter-337312'
+    dataset: data_warehouse
+    tables:
+      - name: raw-companies
+        description: Raw companies data.
+        columns:
+        - name: company_id
+          description: Primary key for companies data.
+          tests:
+            - unique
+            - not_null
+        - name: name_latest
+          description: Company actual name.
+          tests:
+            - not_null
+        - name: name_previous
+          description: Company previous names.
+      - name: raw-indicators_by_company
+        description: Company fundamental data.
+        columns:
+          - name: company_id
+            description: Primary key for companies data.
+            tests:
+              - not_null
+          - name: indicator_id
+            description: Indicator name.
+            tests:
+              - not_null
+          - name: year_2010
+            description: 2010 values.
+          - name: year_2011
+            description: 2011 values.
+          - name: year_2012
+            description: 2012 values.
+          - name: year_2013
+            description: 2013 values.
+          - name: year_2014
+            description: 2014 values.
+          - name: year_2015
+            description: 2015 values.
+          - name: year_2016
+            description: 2016 values.
